@@ -17,11 +17,11 @@ l2 = input('Podaj liczbe 2\n')
 l3 = input('Podaj liczbe 3\n')
 
 if(l1 > l2 and l1 > l3):
-    print(l1 + '\n')
+    print(str(l1) + '\n')
 elif(l2 > l1 and l2 > l3):
-    print(l2 + '\n')
+    print(str(l2) + '\n')
 else:
-    print(l3 + '\n')
+    print(str(l3) + '\n')
     
 # Zadanie 3
 
@@ -44,7 +44,7 @@ while(i <= 122):
 # Zadanie 5
 
 n = input('Podaj n \n')
-sort_type = input("Sortowanie rosnaco/malecjaco\n")
+sort_type = input("Sortowanie 0 - rosnaco; 1 - malecjaco\n")
 
 i = 0
 lista = []
@@ -53,7 +53,7 @@ while(i < int(n)):
     lista.append(int(x));
     i += 1
     
-if(sort_type == 'rosnaco'):
+if(sort_type == 0):
     lista.sort()
 else:
     lista.sort(reverse = True)

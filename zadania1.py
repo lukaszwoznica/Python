@@ -69,13 +69,18 @@ while (i <= int(zak2)):
     
 # Zadanie 6
 
+def fib(n):
+    if n < 1:
+        return 0
+    if n < 2:
+        return 1
+    return fib(n - 1) + fib(n - 2)
+
 n = input("Podaj ilosc wyrazow ciagu\n")
-liczby = [0,1] 
-x = 0
-for i in range(int(n)):                  
-    x = liczby[-1] + liczby[-2]  
-    numbers.append(x)             
-    print (x) 
+i = 0;
+while(i < int(n)):
+    print(fib(int(i)))
+    i += 1
     
     
     

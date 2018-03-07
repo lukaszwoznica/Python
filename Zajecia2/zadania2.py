@@ -36,7 +36,7 @@ lista_punktow = [(1,2), (4,2), (3,3)]
 punkt = (0,0)
 
 def f(lista_p, p_kont):
-  nowa_lista = [(int(math.sqrt((p_kont[0] - lista_p[i][0]) * (p_kont[0] - lista_p[i][0]) + (p_kont[1] - lista_p[i][1]) * (p_kont[1] - lista_p[i][1]))), "Punkt") for i in lista_punktow]
+  nowa_lista = [(math.sqrt(math.pow(p_kont[0] - lista_p[i][0]) + math.pow(p_kont[1] - lista_p[i][1])), "Punkt") for i in lista_punktow]
   nowa_lista_sort = sorted(nowa_lista, key = lambda tup: tup[0])
   return nowa_lista_sort
   

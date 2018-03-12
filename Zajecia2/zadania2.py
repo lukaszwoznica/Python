@@ -2,15 +2,16 @@ import math
 
 # Zadanie 1
 
-#napis = input("Podaj napis\n")
-#lista = [(slowo, len(slowo)) for slowo in napis.split()]
-#print(lista)
+napis = input("Podaj napis\n")
+lista = [(slowo, len(slowo)) for slowo in napis.split()]
+print(lista)
 
 # Zadanie 2
 
-#n = input("Podaj dlugosc ciagu\n")
-#goldenRatio = (1 + 5**0.5)/2
-#fib = [int((goldenRatio)**i - (1 - goldenRatio))]
+n = input("Podaj liczbe wyrazow ciagu\n")
+goldenRatio = (1+5**0.5)/2
+fib = [int(( (goldenRatio)**i - (1 - goldenRatio)**i) / (5**0.5) ) for i in range (0,int(n))]
+print (fib)
 
 # Zadanie 4
 
@@ -32,12 +33,13 @@ print(f(flog,lista))
   
 # Zadanie 5
 
-lista_punktow = [(1,2), (4,2), (3,3)]
-punkt = (0,0)
+def f(lista_p, p_kontorlny):
+  new_list =[]
+  for i in range (0, len(lista_p)):
+    new_list.append((sqrt((lista_p[i][0] - p_kontorlny[0])**2 + (lista_p[i][1] - p_kontorlny[1])**2), ((lista_p[i][0]), (lista_p[i][1]))))
+  list_sort = sorted(new_list, key = lambda tup: tup[0])
+  return list_sort
 
-def f(lista_p, p_kont):
-  nowa_lista = [(math.sqrt(math.pow(p_kont[0] - lista_p[i][0]) + math.pow(p_kont[1] - lista_p[i][1])), "Punkt") for i in lista_punktow]
-  nowa_lista_sort = sorted(nowa_lista, key = lambda tup: tup[0])
-  return nowa_lista_sort
-  
-print(f(lista_punktow, punkt))
+lista_punktow = [(1,0), (3,1), (5,9), (8,2), (4,1)]
+punkt_kontrolny = (0,0)
+print(f(lista_punktow, punkt_kontrolny))

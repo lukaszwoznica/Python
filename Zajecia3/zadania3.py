@@ -78,10 +78,10 @@ class Punkt3D(Punkt2D):
     dist = ((second.x-self.x)**2 + (second.y-self.y)**2 + (second.z-self.z)**2)**0.5
     return dist
     
-p2d_1 = Punkt2D(0,0)
-p2d_2 = Punkt2D(2,2)
-p3d_1 = Punkt3D(0,0,0)
-p3d_2 = Punkt3D(2,2,2)
+p2d_1 = Punkt2D(0, 0)
+p2d_2 = Punkt2D(3, 3)
+p3d_1 = Punkt3D(0, 0, 0)
+p3d_2 = Punkt3D(3, 3, 3)
 print(p2d_1.odleglosc(p2d_2))
 print(p3d_1.odleglosc(p3d_2))
  

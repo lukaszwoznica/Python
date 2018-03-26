@@ -11,9 +11,9 @@ if(sys.argv[1]!="-"):
 			if(line.find(sys.argv[2])!=-1):
 				print line
 else:
-	sys.argv
-	pob=""
-	while(pob!=" "):
-		z=input()
-		pob=pob+z
+	z = raw_input()
+	pob = ""
+	while(z != " "):
+	pob = pob + " " + z
+	z = raw_input()
 	print pob

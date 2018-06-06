@@ -14,7 +14,7 @@ goldenRatio = (1+5**0.5)/2
 fib = [int(( (goldenRatio)**i - (1 - goldenRatio)**i) / (5**0.5) ) for i in range (0,int(n))]
 print (fib)
 
-# Zadanie 4
+# Zadanie 3
 
 lista = [1,2,3,4,5,6]
 
@@ -32,7 +32,7 @@ def f(flogiczna, lista):
 print(f(flog,lista))
   
   
-# Zadanie 5
+# Zadanie 4
 
 def f(lista_p, p_kontorlny):
   new_list =[]
@@ -45,7 +45,7 @@ lista_punktow = [(1,0), (3,1), (5,9), (8,2), (4,1)]
 punkt_kontrolny = (0,0)
 print(f(lista_punktow, punkt_kontrolny))
 
-# Zadnanie 6
+# Zadnanie 5
 
 def generator(p, e):
     for file in os.listdir(p):

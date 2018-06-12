@@ -1,14 +1,10 @@
-#!/usr/bin/env python
-#encoding: utf-8
+import urllib.request as urllib
 
-import urllib2
 from xml.dom import minidom
 
-response = urllib2.urlopen('https://www.yr.no/sted/Polen/Lublin/Lublin/forecast.xml')
+response = urllib.urlopen('https://www.yr.no/sted/Polen/Lublin/Lublin/forecast.xml')
 document = minidom.parse(response)
+
 elements = document.getElementsByTagName("sun")
 
-for e in elements:
-	rise = e.getAttribute("rise")
-
-print rise
+print(elements[0].getAttribute("rise"))

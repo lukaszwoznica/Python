@@ -45,16 +45,3 @@ lista_punktow = [(1,0), (3,1), (5,9), (8,2), (4,1)]
 punkt_kontrolny = (0,0)
 print(f(lista_punktow, punkt_kontrolny))
 
-# Zadnanie 5
-
-def generator(p, e):
-    for file in os.listdir(p):
-        temp = file.split('.')
-        if temp[1] == e:
-            yield file
-
-path = input("Podaj sciezke \n")
-ext = input("Podaj rozszerzenie plikow \n")
-
-for file1 in generator(path, ext):
-    print(file1)

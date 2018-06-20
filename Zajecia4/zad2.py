@@ -9,7 +9,7 @@ with open(sys.argv[1], "r") as f:
 	napis = f.read()
 
 
-for linia in filter(None, napis.splitlines()):
+for linia in napis.splitlines():
 	wyrazy = linia.split(":")
 	slownik[wyrazy[0]] = wyrazy[1]
 
